@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message TextRequest {
+    string text = 1;
+    string context = 2;
+}
+
+message Releated {
+    string word = 1;
+    float relation = 2;
+}
+
+message TextResponse {
+    repeated Releated relatedWords = 1;
+}
+
+service TextService {
+    rpc GetRelatedWords (stream TextRequest) returns (stream TextResponse){};
+}

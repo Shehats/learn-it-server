@@ -1,0 +1,3 @@
+src/secrets
+src/vendor
+src/Gopkg.lock
